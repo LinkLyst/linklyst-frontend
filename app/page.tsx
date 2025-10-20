@@ -1,19 +1,8 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground flex flex-col items-center justify-center px-6 sm:px-12 py-20">
       {/* Hero Section */}
       <main className="text-center max-w-2xl flex flex-col items-center gap-6">
-        <Image
-          src="/logo.svg"
-          alt="Linklyst Logo"
-          width={80}
-          height={80}
-          className="dark:invert mb-4"
-          priority
-        />
-
         <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">
           Linklyst
         </h1>
