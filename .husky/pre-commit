@@ -1,0 +1,8 @@
+#!/bin/sh
+yarn lint-staged || {
+  echo ""
+  echo "❌ Lint-staged failed! Please fix formatting or lint errors before committing."
+  echo "💡 Tip: Run 'yarn lint' or 'yarn prettier:fix' manually."
+  echo ""
+  exit 1
+}

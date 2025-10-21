@@ -1,0 +1,53 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2025,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+    },
+  },
+  "plugins": ["@typescript-eslint", "import", "unused-imports", "simple-import-sort", "prettier"],
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+  ],
+  "rules": {
+    // 🚫 Disallow console.log, allow only warn/error
+    "no-console": ["error", { "allow": ["warn", "error"] }],
+
+    // 🚫 Disallow debugger in commits
+    "no-debugger": "error",
+
+    // 🧹 Remove unused imports automatically
+    "unused-imports/no-unused-imports": "error",
+    "unused-imports/no-unused-vars": [
+      "warn",
+      { "vars": "all", "varsIgnorePattern": "^_", "args": "after-used", "argsIgnorePattern": "^_" },
+    ],
+
+    // 📦 Import sorting rules
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+    "import/order": [
+      "error",
+      {
+        "groups": [["builtin", "external"], ["internal"], ["parent", "sibling", "index"]],
+        "newlines-between": "always",
+      },
+    ],
+
+    // 💅 Prettier integration
+    "prettier/prettier": ["error"],
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"],
+      },
+    },
+  },
+  "ignorePatterns": ["node_modules/", ".next/", "out/", "dist/"],
+}
