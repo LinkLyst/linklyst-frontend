@@ -1,18 +1,18 @@
 export default function Home() {
+  console.log(`hello`);
+
   return (
     <div className="min-h-screen bg-background text-foreground flex flex-col items-center justify-center px-6 sm:px-12 py-20">
       {/* Hero Section */}
       <main className="text-center max-w-2xl flex flex-col items-center gap-6">
-        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">
-          Linklyst
-        </h1>
+        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">Linklyst</h1>
         <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
           A social way to organize your web world — beautifully.
         </p>
 
         <p className="text-sm sm:text-base text-muted-foreground/80 max-w-xl">
-          Save the links you love, organize them visually, and discover what
-          others are sharing. Turn your bookmarks into inspiration.
+          Save the links you love, organize them visually, and discover what others are sharing.
+          Turn your bookmarks into inspiration.
         </p>
 
         {/* CTA Buttons */}
