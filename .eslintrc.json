@@ -2,6 +2,8 @@
   "extends": ["next/core-web-vitals", "plugin:prettier/recommended"],
   "plugins": ["import", "unused-imports", "simple-import-sort"],
   "rules": {
+    "no-console": ["warn", { "allow": ["warn", "error"] }],
+    "no-debugger": "warn",
     "unused-imports/no-unused-imports": "error",
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error",
@@ -11,9 +13,6 @@
         "groups": [["builtin", "external"], ["internal"], ["parent", "sibling", "index"]],
         "newlines-between": "always"
       }
-    ],
-    "react/self-closing-comp": "error",
-    "no-console": ["warn", { "allow": ["warn", "error"] }],
-    "@next/next/no-img-element": "off"
+    ]
   }
 }

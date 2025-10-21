@@ -1,0 +1,18 @@
+#!/bin/sh
+# Validate commit message format
+npx commitlint --edit "$1" || {
+  echo ""
+  echo "❌ Commit message validation failed!"
+  echo ""
+  echo "💡 Expected format:"
+  echo "  type(scope?): subject"
+  echo ""
+  echo "📘 Examples:"
+  echo "  feat(auth): add Google login"
+  echo "  fix(ui): resolve button overlap on mobile"
+  echo "  chore(deps): update eslint"
+  echo ""
+  echo "🔗 Read CONTRIBUTING.md for more details."
+  echo ""
+  exit 1
+}
