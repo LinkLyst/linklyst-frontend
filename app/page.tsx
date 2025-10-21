@@ -1,5 +1,5 @@
 export default function Home() {
-  console.log(`hello`);
+  console.log(`hellos`);
 
   return (
     <div className="min-h-screen bg-background text-foreground flex flex-col items-center justify-center px-6 sm:px-12 py-20">
