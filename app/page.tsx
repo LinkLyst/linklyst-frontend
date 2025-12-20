@@ -1,3 +1,3 @@
 export default function Home() {
-  return <div>hello World</div>;
+  return <div>Welcome to LinkLyst</div>;
 }
