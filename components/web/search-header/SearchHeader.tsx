@@ -10,7 +10,7 @@ const SearchHeader = () => {
         <div className="relative flex-1">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-zinc-400" />
           <Input
-            placeholder="Search..."
+            placeholder="Search.."
             className="pl-9 bg-zinc-900 border-zinc-800 text-sm text-zinc-200 
                        placeholder:text-zinc-500 focus-visible:ring-1 
                        focus-visible:ring-zinc-600"
